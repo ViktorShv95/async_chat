@@ -36,7 +36,10 @@ async def write_history_file(history_file: Path, message: str):
 
 
 def main():
-    logging.basicConfig(level=logging.INFO)
+    logging.basicConfig(
+        format='%(asctime)s - %(levelname)s - %(message)s',
+        level=logging.INFO,
+    )
     parser = ArgumentParser()
     parser.add_argument(
         '--host',
