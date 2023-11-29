@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "async-chat"
+version = "0.1.0"
+description = ""
+authors = ["Viktor Shvajkovskij <viktor.shv1995@gmail.com>"]
+readme = "README.md"
+packages = [{include = "async_chat"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+aiofiles = "^23.2.1"
+ruff = "^0.1.6"
+mypy = "^1.7.1"
+types-aiofiles = "^23.2.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
