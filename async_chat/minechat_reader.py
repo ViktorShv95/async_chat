@@ -55,6 +55,7 @@ def main():
     parser.add_argument(
         '--history',
         type=Path,
+        default=Path('minechat.history'),
         help='Путь к файлу с историей чата',
     )
     args = parser.parse_args()
