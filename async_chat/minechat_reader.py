@@ -12,7 +12,7 @@ async def read_chat(host: str, port: int, history_file: Path):
     while True:
         try:
             reader, writer = await asyncio.open_connection(host, port)
-            logging.info('Connected to minechat.dvmn.org:5000')
+            logging.info(f'Connected to {host}:{port}')
             try:
                 while not reader.at_eof():
                     time = datetime.now().strftime('%d.%m.%y %H:%M')
