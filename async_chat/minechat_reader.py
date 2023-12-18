@@ -62,30 +62,9 @@ def main():
 
     env = Env()
     env.read_env()
-
     host = args.host
-    if not host:
-        try:
-            host = env.str('HOST')
-        except EnvError:
-            logging.warning('Host is not set. Set HOST env variable or use --host argument')
-            return
-    
     port = args.port
-    if not port:
-        try:
-            port = env.int('PORT')
-        except EnvError:
-            logging.warning('Port is not set. Set PORT env variable or use --port argument')
-            return
-    
     history = args.history
-    if not history:
-        try:
-            history = env.path('HISTORY')
-        except EnvError:
-            logging.warning('History is not set. Set HISTORY env variable or use --history argument')
-            return
 
     logging.info(f'Connecting... to {host}:{port}')
 
